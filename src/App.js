@@ -70,8 +70,8 @@ function App() {
       <Bill amount={amount} amountChangeHandler={amountChangeHandler} />
       <Tips
         clickHandler={tipHolder}
-        value={tip}
         changeHandler={changeHandler}
+        clicked={true}
       />
       <People
         changeHandler={peoplechangeHandler}
