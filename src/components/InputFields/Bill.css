@@ -1,0 +1,22 @@
+.billContainer {
+  width: 380px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #f3f9fa;
+  padding-right: 5px;
+}
+.billInput {
+  border: hidden;
+  width: 360px;
+  outline: none;
+  display: flex;
+  text-align: right;
+  background-color: #f3f9fa;
+  font-size: 24px;
+  color: #00474b;
+}
+.billInput:active {
+  border: hidden;
+}

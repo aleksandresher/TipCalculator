@@ -3,18 +3,23 @@ import "../../components/InputFields/Tips.css";
 
 function Tips({ clickHandler, value, changeHandler, selected, data }) {
   return (
-    <div className="btns">
-      {data.map((items) => (
-        <button
-          key={items.id}
-          value={items.text}
-          className={items.selected ? "selected" : "default"}
-          onClick={clickHandler}
-        >
-          {items.placeholder}
-        </button>
-      ))}
-      {/* <label>Select Tip %</label>
+    <div className="btns-container">
+      <div className="selectP">
+        <p>select tip %</p>
+      </div>
+
+      <div className="btns">
+        {data.map((items) => (
+          <button
+            key={items.id}
+            value={items.text}
+            className={items.selected ? "selected" : "default"}
+            onClick={clickHandler}
+          >
+            {items.placeholder}
+          </button>
+        ))}
+        {/* <label>Select Tip %</label>
       <button
         onClick={clickHandler}
         className={selected ? "selected" : "default"}
@@ -46,12 +51,13 @@ function Tips({ clickHandler, value, changeHandler, selected, data }) {
         50
       </button>
       */}
-      <input
-        placeholder="Custom"
-        value={value}
-        onChange={changeHandler}
-        type="number"
-      />
+        <input
+          className="customInput"
+          placeholder="Custom"
+          value={value}
+          onChange={changeHandler}
+        />
+      </div>
     </div>
   );
 }

@@ -1,6 +1,57 @@
+.btns {
+  width: 379px;
+  height: 152px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
 .selected {
-  background-color: aqua;
+  width: 117px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9fe8df;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #00474b;
+  border: none;
 }
 .default {
-  background-color: yellow;
+  width: 117px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00474b;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+}
+
+.customInput {
+  width: 117px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f9fa;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #547878;
+  border-radius: 5px;
+  text-align: center;
+}
+.selectP {
+  font-size: 16px;
+  font-weight: bold;
+  color: #5e7a7d;
+  height: 24px;
+  width: 118px;
+  display: inline;
 }

@@ -122,20 +122,25 @@ function App() {
 
   return (
     <div className="container">
-      <Bill amount={amount} amountChangeHandler={amountChangeHandler} />
-      <Tips
-        clickHandler={tipHolder}
-        changeHandler={changeHandler}
-        data={buttons}
-        value={custom}
-      />
-      <People
-        changeHandler={peoplechangeHandler}
-        value={numberOfPeople}
-        error={error}
-      />
-      <Output calculated={calculated} perPerson={perPerson} />
-      <button onClick={resetResult}>Reset</button>
+      <div className="input">
+        <Bill amount={amount} amountChangeHandler={amountChangeHandler} />
+        <Tips
+          clickHandler={tipHolder}
+          changeHandler={changeHandler}
+          data={buttons}
+          value={custom}
+        />
+        <People
+          changeHandler={peoplechangeHandler}
+          value={numberOfPeople}
+          error={error}
+        />
+      </div>
+
+      <div className="output">
+        <Output calculated={calculated} perPerson={perPerson} />
+        <button onClick={resetResult}>Reset</button>
+      </div>
     </div>
   );
 }
