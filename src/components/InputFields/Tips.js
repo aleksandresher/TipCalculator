@@ -5,7 +5,7 @@ function Tips({ clickHandler, value, changeHandler, selected, data }) {
   return (
     <div className="btns-container">
       <div className="selectP">
-        <p>select tip %</p>
+        <p className="selectTip">select tip %</p>
       </div>
 
       <div className="btns">
@@ -51,12 +51,14 @@ function Tips({ clickHandler, value, changeHandler, selected, data }) {
         50
       </button>
       */}
-        <input
-          className="customInput"
-          placeholder="Custom"
-          value={value}
-          onChange={changeHandler}
-        />
+        <div>
+          <input
+            className="customInput"
+            placeholder="Custom"
+            value={value}
+            onChange={changeHandler}
+          />
+        </div>
       </div>
     </div>
   );

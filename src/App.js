@@ -42,8 +42,8 @@ function App() {
   const [amount, setAmount] = useState("");
   const [tip, setTip] = useState("");
   const [numberOfPeople, setNumberOfPeople] = useState("");
-  const [calculated, setCalculated] = useState("0.00");
-  const [perPerson, setPerPerson] = useState("0.00");
+  const [calculated, setCalculated] = useState("");
+  const [perPerson, setPerPerson] = useState("");
   const [error, setError] = useState("");
   const [buttons, setButtons] = useState(allbutton);
   const [custom, setCustom] = useState("");
@@ -100,9 +100,9 @@ function App() {
   );
 
   function resetResult() {
-    setCalculated("0.00");
+    setCalculated("");
     setAmount("");
-    setPerPerson("0.00");
+    setPerPerson("");
     setNumberOfPeople("");
     setError("");
     setButtons(allbutton);

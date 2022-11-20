@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+.tipAmount {
+  display: flex;
+  width: 333px;
+  height: 71px;
+  align-items: center;
+  justify-content: space-between;
+}
+.dollarsOutput {
+  margin-top: 15px;
+}
+
+.totalAmount {
+  display: flex;
+  width: 333px;
+  height: 71px;
+  align-items: center;
+  justify-content: space-between;
+}
+.dollars {
+  font-size: 48px;
+  font-weight: bold;
+  color: #26c2ae;
+}
+.dollarsOutput {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 10px;
+}
+.label {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Space Mono", monospace;
+}

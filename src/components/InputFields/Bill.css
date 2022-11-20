@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
 .billContainer {
   width: 380px;
   height: 48px;
@@ -8,15 +10,22 @@
   padding-right: 5px;
 }
 .billInput {
-  border: hidden;
+  border: none;
   width: 360px;
   outline: none;
   display: flex;
   text-align: right;
   background-color: #f3f9fa;
   font-size: 24px;
-  color: #00474b;
 }
-.billInput:active {
-  border: hidden;
+.billInput:focus {
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 0 0px #fff;
+}
+.bill {
+  font-size: 16px;
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  color: #5e7a7d;
 }

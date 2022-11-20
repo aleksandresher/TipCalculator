@@ -4,7 +4,7 @@ import "../../components/InputFields/Bill.css";
 function Bill({ amount, amountChangeHandler }) {
   return (
     <div>
-      <label>Bill</label>
+      <label className="bill">Bill</label>
       <div className="billContainer">
         <img src="./images/$.png" className="img" />
         <input
