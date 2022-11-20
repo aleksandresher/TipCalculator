@@ -1,1 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+.peopleBox {
+  width: 380px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #f3f9fa;
+  padding-right: 5px;
+}
+.peopleP {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Space Mono", monospace;
+  color: #5e7a7d;
+  text-transform: capitalize;
+}
+.peopleInput {
+  border: none;
+  width: 360px;
+  outline: none;
+  display: flex;
+  text-align: right;
+  background-color: #f3f9fa;
+  font-size: 24px;
+}
+.peopleInput:focus {
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 0 0px #fff;
+}

@@ -12,7 +12,9 @@ function Bill({ amount, amountChangeHandler }) {
           value={amount}
           onChange={amountChangeHandler}
           placeholder="0"
+          type="number"
           id="amount"
+          min="1"
         />
       </div>
     </div>

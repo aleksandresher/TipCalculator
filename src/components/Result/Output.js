@@ -5,7 +5,11 @@ function Output({ calculated, perPerson }) {
   return (
     <div className="dollarsOutput">
       <div className="tipAmount">
-        <label className="label">Tip Amount </label>
+        <div className="tipP">
+          <p className="label">Tip Amount </p>
+          <p className="secondlabel">/ person</p>
+        </div>
+
         <output className="dollars">
           {calculated ? (
             calculated
@@ -16,7 +20,11 @@ function Output({ calculated, perPerson }) {
       </div>
 
       <div className="totalAmount">
-        <label className="label">Total</label>
+        <div className="tipP">
+          <p className="label">Total </p>
+          <p className="secondlabel">/ person</p>
+        </div>
+
         <output className="dollars">
           {" "}
           {perPerson ? perPerson : <img src="./images/$0.png" />}

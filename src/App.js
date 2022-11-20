@@ -139,7 +139,12 @@ function App() {
 
       <div className="output">
         <Output calculated={calculated} perPerson={perPerson} />
-        <button onClick={resetResult}>Reset</button>
+        <button
+          onClick={resetResult}
+          className={amount ? "defaultBtn" : "resetBtn"}
+        >
+          Reset
+        </button>
       </div>
     </div>
   );
