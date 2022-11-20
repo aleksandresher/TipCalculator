@@ -5,6 +5,39 @@ import Tips from "./components/InputFields/Tips";
 import People from "./components/InputFields/People";
 import Output from "./components/Result/Output";
 
+const allbutton = [
+  {
+    id: 5,
+    text: 5,
+    placeholder: "5%",
+    selected: false,
+  },
+  {
+    id: 10,
+    text: 10,
+    placeholder: "10%",
+    selected: false,
+  },
+  {
+    id: 15,
+    text: 15,
+    placeholder: "15%",
+    selected: false,
+  },
+  {
+    id: 25,
+    text: 25,
+    placeholder: "25%",
+    selected: false,
+  },
+  {
+    id: 50,
+    text: 50,
+    placeholder: "50%",
+    selected: false,
+  },
+];
+
 function App() {
   const [amount, setAmount] = useState("");
   const [tip, setTip] = useState("");
@@ -12,6 +45,9 @@ function App() {
   const [calculated, setCalculated] = useState("");
   const [perPerson, setPerPerson] = useState("");
   const [error, setError] = useState("");
+  const [selectedBtn, setSelectedBtn] = useState(false);
+  const [buttons, setButtons] = useState(allbutton);
+  const [custom, setCustom] = useState("");
 
   function amountChangeHandler(e) {
     e.preventDefault();
@@ -19,12 +55,28 @@ function App() {
   }
 
   function tipHolder(event) {
-    setTip(event.target.innerText);
+    setTip(event.target.value);
+    const newArray = allbutton.map((item) => {
+      if (Number(event.target.value) === item.id) {
+        return {
+          ...item,
+          selected: !item.selected,
+        };
+      } else {
+        return item;
+      }
+    });
+    setButtons(newArray);
+    setCustom("");
+
+    console.log(event.target);
   }
 
   function changeHandler(e) {
     e.preventDefault();
     setTip(e.target.value);
+    setButtons(allbutton);
+    setCustom(e.target.value);
   }
 
   function peoplechangeHandler(e) {
@@ -52,6 +104,7 @@ function App() {
     setPerPerson("");
     setNumberOfPeople("");
     setError("");
+    setButtons(allbutton);
   }
 
   useEffect(
@@ -71,7 +124,8 @@ function App() {
       <Tips
         clickHandler={tipHolder}
         changeHandler={changeHandler}
-        clicked={true}
+        data={buttons}
+        value={custom}
       />
       <People
         changeHandler={peoplechangeHandler}
