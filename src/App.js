@@ -47,6 +47,7 @@ function App() {
   const [error, setError] = useState("");
   const [buttons, setButtons] = useState(allbutton);
   const [custom, setCustom] = useState("");
+  const [erorrClass, setErrorClass] = useState(false);
 
   function amountChangeHandler(e) {
     e.preventDefault();
@@ -67,8 +68,6 @@ function App() {
     });
     setButtons(newArray);
     setCustom("");
-
-    console.log(event.target);
   }
 
   function changeHandler(e) {
@@ -113,10 +112,12 @@ function App() {
 
   useEffect(
     function () {
-      if (numberOfPeople === "0") {
-        setError("Number of peope can't be 0");
+      if (numberOfPeople === 0) {
+        setError("Can't be zero");
+        setErrorClass(true);
       } else if (numberOfPeople !== "0") {
         setError("");
+        setErrorClass(false);
       }
     },
     [numberOfPeople]
@@ -136,6 +137,7 @@ function App() {
           changeHandler={peoplechangeHandler}
           value={numberOfPeople}
           error={error}
+          errorClass={erorrClass}
         />
       </div>
 
@@ -143,7 +145,7 @@ function App() {
         <Output calculated={calculated} perPerson={perPerson} />
         <button
           onClick={resetResult}
-          className={amount ? "defaultBtn" : "resetBtn"}
+          className={amount || numberOfPeople ? "defaultBtn" : "resetBtn"}
         >
           Reset
         </button>
