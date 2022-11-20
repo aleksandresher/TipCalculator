@@ -42,10 +42,9 @@ function App() {
   const [amount, setAmount] = useState("");
   const [tip, setTip] = useState("");
   const [numberOfPeople, setNumberOfPeople] = useState("");
-  const [calculated, setCalculated] = useState("");
-  const [perPerson, setPerPerson] = useState("");
+  const [calculated, setCalculated] = useState("0.00");
+  const [perPerson, setPerPerson] = useState("0.00");
   const [error, setError] = useState("");
-  const [selectedBtn, setSelectedBtn] = useState(false);
   const [buttons, setButtons] = useState(allbutton);
   const [custom, setCustom] = useState("");
 
@@ -87,9 +86,11 @@ function App() {
   useEffect(
     function () {
       if (amount > 0 && tip !== "" && numberOfPeople > 0) {
-        const calcResult = amount / numberOfPeople;
+        const calcResult = Number(amount / numberOfPeople).toFixed(2);
         setCalculated(calcResult);
-        const tipCalc = (amount * tip) / 100 / numberOfPeople;
+        const tipCalc = Number((amount * tip) / 100 / numberOfPeople).toFixed(
+          2
+        );
         setPerPerson(tipCalc);
       } else if (numberOfPeople === "0") {
         setError("Number of People can't be 0");
@@ -99,12 +100,13 @@ function App() {
   );
 
   function resetResult() {
-    setCalculated("");
+    setCalculated("0.00");
     setAmount("");
-    setPerPerson("");
+    setPerPerson("0.00");
     setNumberOfPeople("");
     setError("");
     setButtons(allbutton);
+    setCustom("");
   }
 
   useEffect(

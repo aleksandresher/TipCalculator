@@ -47,7 +47,7 @@ function Tips({ clickHandler, value, changeHandler, selected, data }) {
       </button>
       */}
       <input
-        placeholder=""
+        placeholder="Custom"
         value={value}
         onChange={changeHandler}
         type="number"

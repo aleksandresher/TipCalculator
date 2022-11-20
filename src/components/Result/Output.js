@@ -5,12 +5,12 @@ function Output({ calculated, perPerson }) {
     <div>
       <div>
         <label>Amount per person</label>
-        <output>{calculated}</output>
+        <output>${calculated}</output>
       </div>
 
       <div>
         <label>Tip Per Person</label>
-        <output>{perPerson}</output>
+        <output>${perPerson}</output>
       </div>
     </div>
   );
