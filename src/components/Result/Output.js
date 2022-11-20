@@ -11,8 +11,8 @@ function Output({ calculated, perPerson }) {
         </div>
 
         <output className="dollars">
-          {calculated ? (
-            calculated
+          {perPerson ? (
+            perPerson
           ) : (
             <img src="./images/$0.png" className="dollarimg" />
           )}
@@ -27,7 +27,7 @@ function Output({ calculated, perPerson }) {
 
         <output className="dollars">
           {" "}
-          {perPerson ? perPerson : <img src="./images/$0.png" />}
+          {calculated ? calculated : <img src="./images/$0.png" />}
         </output>
       </div>
     </div>

@@ -14,7 +14,7 @@ function Bill({ amount, amountChangeHandler }) {
           placeholder="0"
           type="number"
           id="amount"
-          min="1"
+          min={1}
         />
       </div>
     </div>

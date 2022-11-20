@@ -50,7 +50,7 @@ function App() {
 
   function amountChangeHandler(e) {
     e.preventDefault();
-    setAmount(e.target.value);
+    setAmount(Number(e.target.value));
   }
 
   function tipHolder(event) {
@@ -73,21 +73,23 @@ function App() {
 
   function changeHandler(e) {
     e.preventDefault();
-    setTip(e.target.value);
+    setTip(Number(e.target.value));
     setButtons(allbutton);
     setCustom(e.target.value);
   }
 
   function peoplechangeHandler(e) {
     e.preventDefault();
-    setNumberOfPeople(e.target.value);
+    setNumberOfPeople(Number(e.target.value));
   }
 
   useEffect(
     function () {
       if (amount > 0 && tip !== "" && numberOfPeople > 0) {
-        const calcResult = Number(amount / numberOfPeople).toFixed(2);
-        setCalculated(calcResult);
+        const res = Number((amount * tip) / 100);
+        const calcResult = Number(res + amount) / Number(numberOfPeople);
+        // const calcResult = Number(amount / numberOfPeople).toFixed(2);
+        setCalculated(calcResult.toFixed(2));
         const tipCalc = Number((amount * tip) / 100 / numberOfPeople).toFixed(
           2
         );
