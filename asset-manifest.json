@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/TipCalculator/static/css/main.426d8ca1.css",
+    "main.js": "/TipCalculator/static/js/main.d53dabf7.js",
+    "static/js/787.28cb0dcd.chunk.js": "/TipCalculator/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/TipCalculator/index.html",
+    "main.426d8ca1.css.map": "/TipCalculator/static/css/main.426d8ca1.css.map",
+    "main.d53dabf7.js.map": "/TipCalculator/static/js/main.d53dabf7.js.map",
+    "787.28cb0dcd.chunk.js.map": "/TipCalculator/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.426d8ca1.css",
+    "static/js/main.d53dabf7.js"
+  ]
+}
