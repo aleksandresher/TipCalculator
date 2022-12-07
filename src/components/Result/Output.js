@@ -1,5 +1,6 @@
 import React from "react";
 import "../../components/Result/Output.css";
+import zero from "../../images/$0.png";
 
 function Output({ calculated, perPerson }) {
   return (
@@ -14,7 +15,7 @@ function Output({ calculated, perPerson }) {
           {perPerson ? (
             perPerson
           ) : (
-            <img src="./images/$0.png" className="dollarimg" />
+            <img src={zero} className="dollarimg" alt=" 0" />
           )}
         </output>
       </div>
@@ -27,7 +28,7 @@ function Output({ calculated, perPerson }) {
 
         <output className="dollars">
           {" "}
-          {calculated ? calculated : <img src="./images/$0.png" />}
+          {calculated ? calculated : <img src={zero} />}
         </output>
       </div>
     </div>

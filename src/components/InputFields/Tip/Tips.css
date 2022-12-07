@@ -20,6 +20,7 @@
   font-weight: bold;
   border-radius: 5px;
   color: #00474b;
+  font-family: "Space Mono", monospace;
   border: none;
 }
 .default {
@@ -30,6 +31,7 @@
   justify-content: center;
   background-color: #00474b;
   font-size: 24px;
+  font-family: "Space Mono", monospace;
   font-weight: bold;
   border-radius: 5px;
   color: #fff;
@@ -37,7 +39,8 @@
 }
 
 .customInput {
-  width: 117px;
+  width: 115px;
+  margin: 0;
   height: 47px;
   display: flex;
   font-family: "Space Mono", monospace;
@@ -46,28 +49,79 @@
   background-color: #f3f9fa;
   border: none;
   font-size: 24px;
-  font-weight: bold;
-  color: #547878;
+  font-weight: 700;
+  color: #00474b;
   border-radius: 5px;
   text-align: center;
   outline: none;
 }
-.selectP {
-  font-size: 16px;
-  font-weight: bold;
-  color: #5e7a7d;
-  height: 24px;
-  width: 118px;
-  display: inline;
-}
+
 input:focus {
   border: none;
-  box-shadow: inset 0 0 0 1px #26c2ae;
+  box-shadow: inset 0 0 0 2px #26c2ae;
 }
 .selectTip {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   font-family: "Space Mono", monospace;
   color: #5e7a7d;
   text-transform: capitalize;
+}
+
+@media screen and (max-width: 980px) {
+  .btns {
+    width: 300px;
+  }
+  .selected {
+    width: 80px;
+  }
+  .default {
+    width: 80px;
+  }
+  .customInput {
+    width: 80px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .btns {
+    width: 150px;
+  }
+  .selected {
+    width: 60px;
+  }
+  .default {
+    width: 60px;
+  }
+}
+@media screen and (max-width: 485px) {
+  .btns-container {
+    width: 380px;
+    align-items: center;
+  }
+  .btns {
+    grid-template-columns: 1fr 1fr;
+  }
+  .selected {
+    width: 170px;
+  }
+  .default {
+    width: 146px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .btns-container {
+    width: 311px;
+  }
+  .btns {
+    grid-template-columns: 1fr 1fr;
+  }
+  .selected {
+    width: 146px;
+  }
+  .default {
+    width: 146px;
+  }
 }

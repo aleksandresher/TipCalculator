@@ -1,8 +1,8 @@
 import "./App.css";
-import Bill from ".//components/InputFields/Bill";
+import Bill from "./components/InputFields/Bill/Bill";
 import React, { useState, useEffect } from "react";
-import Tips from "./components/InputFields/Tips";
-import People from "./components/InputFields/People";
+import Tips from "./components/InputFields/Tip/Tips";
+import People from "./components/InputFields/People/People";
 import Output from "./components/Result/Output";
 
 const allbutton = [
@@ -71,19 +71,17 @@ function App() {
   }
 
   function changeHandler(e) {
-    e.preventDefault();
     setTip(Number(e.target.value));
     setButtons(allbutton);
     setCustom(e.target.value);
   }
 
   function peoplechangeHandler(e) {
-    e.preventDefault();
     setNumberOfPeople(Number(e.target.value));
   }
 
   useEffect(
-    function () {
+    function() {
       if (amount > 0 && tip !== "" && numberOfPeople > 0) {
         const res = Number((amount * tip) / 100);
         const calcResult = Number(res + amount) / Number(numberOfPeople);
@@ -111,7 +109,7 @@ function App() {
   }
 
   useEffect(
-    function () {
+    function() {
       if (numberOfPeople === 0) {
         setError("Can't be zero");
         setErrorClass(true);
@@ -145,7 +143,7 @@ function App() {
         <Output calculated={calculated} perPerson={perPerson} />
         <button
           onClick={resetResult}
-          className={amount || numberOfPeople ? "defaultBtn" : "resetBtn"}
+          className={amount || numberOfPeople ? "resetBtn" : "defaultBtn"}
         >
           Reset
         </button>

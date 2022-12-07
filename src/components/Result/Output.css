@@ -48,3 +48,58 @@
   font-family: "Space Mono", monospace;
   margin: 0;
 }
+
+@media screen and (max-width: 980px) {
+  .tipAmount {
+    width: 270px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .totalAmount {
+    width: 270px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .tipAmount {
+    height: 200px;
+  }
+  .dollarsOutput {
+    height: 260px;
+  }
+}
+@media screen and (max-width: 485px) {
+  .dollarsOutput {
+    width: 327px;
+  }
+  .tipAmount {
+    width: 281px;
+    height: 48px;
+  }
+  .dollars {
+    font-size: 28px;
+  }
+  .totalAmount {
+    width: 281px;
+    height: 48px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .dollarsOutput {
+    width: 327px;
+  }
+  .tipAmount {
+    width: 281px;
+    height: 48px;
+    padding: 10px;
+  }
+  .dollars {
+    font-size: 32px;
+  }
+  .totalAmount {
+    width: 281px;
+    height: 48px;
+    padding: 10px;
+  }
+}

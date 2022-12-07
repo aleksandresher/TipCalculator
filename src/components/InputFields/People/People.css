@@ -9,6 +9,7 @@
   background-color: #f3f9fa;
   padding-right: 5px;
   border-radius: 5px;
+  margin-top: 6px;
 }
 .valid {
   width: 380px;
@@ -35,7 +36,10 @@
   display: flex;
   text-align: right;
   background-color: #f3f9fa;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
   font-size: 24px;
+  color: #00474b;
   border-radius: 5px;
 }
 .peopleInput:focus {
@@ -56,4 +60,39 @@
 .errorContainer {
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 980px) {
+  .peopleInput {
+    width: 270px;
+  }
+  .peopleBox {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .peopleBox {
+    width: 230px;
+  }
+  .peopleBox {
+    width: 260px;
+  }
+}
+@media screen and (max-width: 485px) {
+  .peopleBox {
+    width: 360px;
+  }
+  .peopleInput {
+    width: 340px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .peopleBox {
+    width: 311px;
+  }
+  .peopleInput {
+    width: 270px;
+  }
 }

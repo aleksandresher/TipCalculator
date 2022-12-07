@@ -1,5 +1,5 @@
 import React from "react";
-import "../../components/InputFields/Tips.css";
+import "../Tip/Tips.css";
 
 function Tips({ clickHandler, value, changeHandler, selected, data }) {
   return (
@@ -19,44 +19,14 @@ function Tips({ clickHandler, value, changeHandler, selected, data }) {
             {items.placeholder}
           </button>
         ))}
-        {/* <label>Select Tip %</label>
-      <button
-        onClick={clickHandler}
-        className={selected ? "selected" : "default"}
-      >
-        5
-      </button>
-      <button
-        onClick={clickHandler}
-        className={selected ? "selected" : "default"}
-      >
-        10
-      </button>
-      <button
-        onClick={clickHandler}
-        className={selected ? "selected" : "default"}
-      >
-        15
-      </button>
-      <button
-        onClick={clickHandler}
-        className={selected ? "selected" : "default"}
-      >
-        25
-      </button>
-      <button
-        onClick={clickHandler}
-        className={selected ? "selected" : "default"}
-      >
-        50
-      </button>
-      */}
+
         <div>
           <input
             className="customInput"
             placeholder="Custom"
             value={value}
             onChange={changeHandler}
+            type="number"
           />
         </div>
       </div>

@@ -1,12 +1,13 @@
 import React from "react";
-import "../../components/InputFields/Bill.css";
+import "../Bill/Bill.css";
+import dollar from "../../../images/$.png";
 
 function Bill({ amount, amountChangeHandler }) {
   return (
     <div>
       <label className="bill">Bill</label>
       <div className="billContainer">
-        <img src="./images/$.png" className="img" />
+        <img src={dollar} className="img" alt="Dollar" />
         <input
           className="billInput"
           value={amount}

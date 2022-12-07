@@ -1,5 +1,6 @@
 import React from "react";
-import ".//../InputFields/People.css";
+import "../People/People.css";
+import man from "../../../images/man.png";
 
 function People({ value, changeHandler, error, errorClass }) {
   return (
@@ -10,7 +11,7 @@ function People({ value, changeHandler, error, errorClass }) {
       </div>
 
       <div className={errorClass ? "valid" : "peopleBox"}>
-        <img src="./images/man.png" className="manImg" />
+        <img src={man} className="manImg" alt=" man" />
         <input
           placeholder="0"
           value={value}
